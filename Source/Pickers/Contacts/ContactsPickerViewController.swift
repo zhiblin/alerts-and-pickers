@@ -164,7 +164,8 @@ final class ContactsPickerViewController: UIViewController {
                 self.fetchContacts(completionHandler: completionHandler)
             }
 
-        case .denied, .restricted:
+//        case .denied, .restricted:
+        default :
             /// User has denied the current app to access the contacts.
             let productName = Bundle.main.infoDictionary!["CFBundleName"]!
             let alert = UIAlertController(style: .alert, title: "Permission denied", message: "\(productName) does not have access to contacts. Please, allow the application to access to your contacts.")

@@ -141,3 +141,11 @@ public extension Array {
         return self[index]
     }
 }
+extension Array {
+    
+    func flatMap<ElementOfResult>(
+        _ transform: (Element) throws -> ElementOfResult?
+        ) rethrows -> [ElementOfResult] {
+        return try compactMap(transform)
+    }
+}

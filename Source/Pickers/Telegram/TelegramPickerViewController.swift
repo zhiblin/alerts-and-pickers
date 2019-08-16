@@ -207,7 +207,8 @@ final class TelegramPickerViewController: UIViewController {
                 self.fetchPhotos(completionHandler: completionHandler)
             }
             
-        case .denied, .restricted:
+        default :
+//        case .denied, .restricted:
             /// User has denied the current app to access the contacts.
             let productName = Bundle.main.infoDictionary!["CFBundleName"]!
             let alert = UIAlertController(style: .alert, title: "Permission denied", message: "\(productName) does not have access to contacts. Please, allow the application to access to your photo library.")
