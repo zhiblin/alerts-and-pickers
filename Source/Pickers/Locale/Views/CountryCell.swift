@@ -8,8 +8,8 @@ final class CountryTableViewCell: UITableViewCell {
     static let identifier = String(describing: CountryTableViewCell.self)
     
     // MARK: Initialize
-    
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
         backgroundColor = nil
